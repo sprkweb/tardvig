@@ -1,6 +1,7 @@
-doc/
 .yardoc/
+coverage/
+doc/
+tmp/
+*.gem
 .byebug_history
 Gemfile.lock
-*.gem
-tmp/

@@ -86,7 +86,7 @@ RSpec.describe Tardvig::Events do
       extended_obj.on :another_event do
         raise 'It should not be executed'
       end
-      extended_obj.happen :my_event
+      expect { extended_obj.happen :my_event }.to_not raise_error
     end
 
     it 'passes data as an argument' do

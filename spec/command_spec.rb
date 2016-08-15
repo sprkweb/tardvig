@@ -13,6 +13,12 @@ RSpec.describe Tardvig::Command do
     expect(command_instance.result).to eq(4)
   end
 
+  describe 'process' do
+    it 'raises exception if it is not defined' do
+      expect { described_class.call }.to raise_error(NoMethodError)
+    end
+  end
+
   describe 'new' do
     it 'recieves params' do
       mycommand = Tardvig::Command.new foo: 'bar', baz: 123

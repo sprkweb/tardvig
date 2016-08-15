@@ -83,10 +83,10 @@ RSpec.describe Tardvig::Events do
     end
 
     it 'executes listeners only from the given event' do
-      extended_obj.on :another_event do
-        raise 'It should not be executed'
-      end
-      expect { extended_obj.happen :my_event }.to_not raise_error
+      listener = proc {}
+      extended_obj.on :another_event, &listener
+      expect(listener).to_not receive(:call)
+      extended_obj.happen :my_event
     end
 
     it 'passes data as an argument' do

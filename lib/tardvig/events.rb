@@ -3,8 +3,23 @@ module Tardvig
   # @see https://en.wikipedia.org/wiki/Event_%28computing%29
   module Events
     # Binds given listener (handler/callback) to given event name
+    # @param event [Object] any custom identificator. Your listener will be
+    #   executed only when you trigger event with this identificator.
+    # @param listener [#call] this object will be executed (through the #call
+    #   method) when you trigger the given event.
     def on(event, &listener)
       listeners(event) << listener
+    end
+
+    # Does the same as {#on}, but the listener will be executed only once, then
+    # it will be deleted.
+    # @param (see #on)
+    def on_first(event, &listener)
+      throwaway_callback = proc do |*args|
+        remove_listener event, throwaway_callback
+        listener.call(*args)
+      end
+      listeners(event) << throwaway_callback
     end
 
     # Unbinds given listener from the given event name

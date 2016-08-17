@@ -10,7 +10,7 @@ DOC
   s.homepage = 'https://github.com/sprkweb/tardvig'
   s.author = 'Vadim Saprykin'
   s.email = 'sprkweb@ya.ru'
-  s.files = ['lib/tardvig.rb']
+  s.files = Dir['lib/**/*.rb', 'LICENSE', '*.md']
   s.license = 'MIT'
 
   s.required_ruby_version = '>= 2.0.0'

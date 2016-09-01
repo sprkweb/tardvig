@@ -2,7 +2,6 @@
 
 [RubyGem](https://rubygems.org/gems/tardvig) |
 [RubyDoc](http://www.rubydoc.info/gems/tardvig) |
-[GitHub](https://github.com/sprkweb/tardvig)
 
 **Warning!** I do **not** recommend to use it.
 This gem is in the alpha stage of development now and it is very badly written

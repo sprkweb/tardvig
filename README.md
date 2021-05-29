@@ -1,14 +1,9 @@
 # Tardvig [![Gem Version](https://badge.fury.io/rb/tardvig.svg)](https://badge.fury.io/rb/tardvig)
 
 [RubyGem](https://rubygems.org/gems/tardvig) |
-[RubyDoc](http://www.rubydoc.info/gems/tardvig) |
+[RubyDoc](http://www.rubydoc.info/gems/tardvig)
 
-**Warning!** I do **not** recommend to use it.
-This gem is in the alpha stage of development now and it is very badly written
-and it does almost nothing.
-
-My English is very bad. Please, do not be mad at me. You can correct my errors
-if you want.
+> No longer developed. I do **not** recommend to use it. (see the [tarona readme](https://github.com/sprkweb/tarona#readme))
 
 ## Description
 Lightweight structure for Ruby-based game engines.
